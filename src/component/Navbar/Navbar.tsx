@@ -21,12 +21,12 @@ const Navbar = () => {
 
   const debouncedSearch = debounce(
     () => productDispatch({ type: "FILTER_BY_SEARCH", payload: search }),
-    500
+    500,
   );
 
   useEffect(() => {
     debouncedSearch();
-  }, [search, productDispatch]);
+  }, [search, debouncedSearch]);
 
   return (
     <nav>

@@ -2,7 +2,7 @@
 # Styx Shopping Cart
 
 This is done as an assignment submission for an internship Oppoutnity at Styx.
-Thought of doing this assignment in next.js, then Adhered to the Assignment Guidlines;
+Thought of doing this assignment in Next.js, then Adhered to the Assignment Guidlines;
 
 
 ### Technology Used
@@ -55,7 +55,7 @@ By implementing debouncing, I successfully optimized the searching feature by **
 
 ## Type Safety
 
-To ensure type safety and enhance the development experience, I utilized TypeScript in my Styx Shopping Cart project. 
+To ensure type safety and enhance the development experience, I utilized **TypeScript** in my Styx Shopping Cart project. 
 
 By using TypeScript, I was able to define explicit types for variables, function parameters, and return values. This helped me catch potential type errors during development, as TypeScript performs static type checking and provides compile-time feedback on type mismatches.
 

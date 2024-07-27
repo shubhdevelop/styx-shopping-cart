@@ -27,7 +27,9 @@ function CartBadge() {
 
   const dropdownContent = (
     <div className="dropdown-content">
-      {cartItems ? [...cartItems] : <p>No item in Cart !</p>}
+      <div className="item-container hide-scrollbar">
+        {cartItems ? [...cartItems] : <p>No item in Cart !</p>}
+      </div>
       {cartItems.length > 0 ? (
         <div>
           <Link to="/cart">

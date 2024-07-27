@@ -25,11 +25,14 @@ const CartItem = ({ id, title, images, price, discount }: Props) => {
       <img src={images[0]} alt={title} className="cart-item-image" />
       <div className="cart-item-details">
         <h4 className="cart-item-title">{title}</h4>
-        <p className="cart-item-price">${(price * quantity).toFixed()}</p>
-        <span className="price-discount">{discount.toFixed()}% off</span>
-        <span className="actual-price">
-          {((1 + discount / 100) * price * quantity).toFixed()}
+        <span className="oneliner">
+          <h4 className="cart-item-price">${(price * quantity).toFixed()}</h4>
+          <h5 className="price-discount">{discount.toFixed()}% off</h5>
+          <h5 className="actual-price">
+            {((1 + discount / 100) * price * quantity).toFixed()}
+          </h5>
         </span>
+
         <div className="cart-item-quantity">
           <button
             className="cart-item-quantity-btn box"

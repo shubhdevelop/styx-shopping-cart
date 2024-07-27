@@ -64,7 +64,6 @@ const FilterSection = () => {
         onClick={() => productDispatch({ type: "REMOVE_FILTER" })}
         className="clear-filter-btn"
       >
-        {" "}
         Clear Filters
       </button>
     </div>

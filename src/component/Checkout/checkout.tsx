@@ -1,4 +1,5 @@
-import { Link, ArrowBigLeft } from "lucide-react";
+import { ArrowBigLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Checkout() {
   return (

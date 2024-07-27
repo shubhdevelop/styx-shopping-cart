@@ -5,7 +5,7 @@ This is done as an assignment submission for an internship Oppoutnity at Styx .
 
 
 ### Design File
-[Figma](#https://www.figma.com/design/p5PLinvCe82ZudXuhYcp3u/styx-shopping-cart?node-id=0-1&t=qvl1bfBF4lwUXSfc-1)
+[Figma](https://www.figma.com/design/p5PLinvCe82ZudXuhYcp3u/styx-shopping-cart?node-id=0-1&t=qvl1bfBF4lwUXSfc-1)
 
 ## Feature
 - [x]  Product Listing Page

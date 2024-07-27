@@ -1,3 +1,5 @@
+import { Link, ArrowBigLeft } from "lucide-react";
+
 function Checkout() {
   return (
     <div
@@ -12,6 +14,11 @@ function Checkout() {
     >
       <h1>Thank you for shopping with us!</h1>
       <p> We hope to see you again soon!!</p>
+      <Link to="/">
+        <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
+          <ArrowBigLeft /> <p>Continue Shopping</p>
+        </div>
+      </Link>
     </div>
   );
 }

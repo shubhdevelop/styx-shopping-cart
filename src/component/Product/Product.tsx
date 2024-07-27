@@ -1,54 +1,66 @@
-import { log } from "console";
+import { StarIcon } from "lucide-react";
 import { CartState } from "../../context/Context";
 import { CartItem } from "../../types/Cart.types";
 import "./product.css";
 
 type Props = {
-  name: string;
+  title: string;
   price: number;
   description: string;
   src: string;
   discount: number;
   id: number;
   stock: number;
+  rating: number;
 };
 function Product({
   id,
-  name,
+  title,
   price,
   description,
   src,
   discount,
   stock,
+  rating,
 }: Props) {
   const { state, dispatch } = CartState();
 
   const isInCart = state.cart.some((c: CartItem) => c.id === id);
+  const Rating: React.ReactNode[] = [];
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      Rating.push(<StarIcon key={i} size={10} fill="black" />);
+    } else {
+      Rating.push(<StarIcon key={i} size={10} />);
+    }
+  }
 
   return (
     <div className="product">
       <div className="image-container">
-        <img className="product-image" src={src} alt={name} />
+        <img className="product-image" src={src} alt={title} />
       </div>
       <div className="product-info">
-        <h2 className="product-name">{name}</h2>
+        <h2 className="product-name">{title}</h2>
         <p className="price-info product-price">
-          <span>&#8377;</span> {price.toFixed()}{" "}
+          <span>&#8377;</span> {price.toFixed()}
           <span className="price-discount">{discount.toFixed()}% off</span>
           <span className="actual-price">
             {((1 + discount / 100) * price).toFixed()}
           </span>
         </p>
         <p className="product-description">{description}</p>
+
+        <div className="rating">{Rating}</div>
       </div>
-      {stock == 0 ? (
+      {stock === 0 ? (
         <button className="product-button out-of-stock">Out of Stock</button>
       ) : !isInCart ? (
         <button
           onClick={() => {
             dispatch({
               type: "ADD_TO_CART",
-              payload: { id, name, price, discount, qty: 1 },
+              payload: { id, title, price, discount, qty: 1, images: [src] },
             });
           }}
           className="product-button"
@@ -60,7 +72,10 @@ function Product({
           onClick={() => {
             dispatch({
               type: "REMOVE_FROM_CART",
-              payload: { id, qty: 1 },
+              payload: {
+                id,
+                qty: 1,
+              },
             });
           }}
           className="product-button remove"

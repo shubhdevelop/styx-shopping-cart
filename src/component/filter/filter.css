@@ -26,3 +26,14 @@
 .filter-section label {
     display: inline-block;
 }
+
+.clear-filter-btn {
+    margin-top: 10px;
+    font-size: large;
+    color: whites;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffa125;
+    cursor: pointer;
+}

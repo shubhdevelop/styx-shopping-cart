@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import Cart from "./component/Cart/Cart";
 import Context from "./context/Context";
+import Checkout from "./component/Checkout/checkout";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route path="/cart" element={<Cart />}></Route>
+      <Route path="/checkout" element={<Checkout />}></Route>
       <Route index element={<App />} />
     </Route>
   )

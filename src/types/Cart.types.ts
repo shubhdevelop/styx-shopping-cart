@@ -4,10 +4,13 @@ type CartItem = {
   price: number;
   discount: number;
   qty: number;
+  image: string;
 };
 type ProductList = IndividualProduct[];
 type IndividualProduct = {
   id: number;
+  qty?: number; // Optional Because when we are adding product to cart we are not adding qty
+  discount?: number; // Optional Because when we are adding product to cart we are not adding discount
   title: string;
   description: string;
   category: string;
@@ -28,7 +31,6 @@ type IndividualProduct = {
   shippingInformation: string;
   availabilityStatus: string;
   reviews: Review[];
-
   returnPolicy: string;
   minimumOrderQuantity: number;
   meta: {

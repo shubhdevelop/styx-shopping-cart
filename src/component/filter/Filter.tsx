@@ -1,37 +1,72 @@
+import { StarIcon } from "lucide-react";
 import SortBy from "../Sort/SortBy";
 import "./filter.css";
+import { CartState } from "../../context/Context";
 
 const FilterSection = () => {
+  const { productState, productDispatch } = CartState();
+
+  const Rating: React.ReactNode[] = [];
+  for (let i = 1; i <= 5; i++) {
+    if (i <= productState.rating) {
+      Rating.push(
+        <StarIcon
+          key={i}
+          size={24}
+          fill="black"
+          onClick={() =>
+            productDispatch({
+              type: "FILTER_BY_RATING",
+              payload: i,
+            })
+          }
+        />
+      );
+    } else {
+      Rating.push(
+        <StarIcon
+          key={i}
+          size={24}
+          onClick={() =>
+            productDispatch({
+              type: "FILTER_BY_RATING",
+              payload: i,
+            })
+          }
+        />
+      );
+    }
+  }
+
   return (
     <div className="filter-section">
       <h2>Filter Section</h2>
       <div>
         <h3>Availability</h3>
         <div>
-          <input type="checkbox" name="brand" id="brand1" />
-          <label htmlFor="brand1">Exlude Out of Stock Item</label>
+          <input
+            type="checkbox"
+            id="stock"
+            onChange={() => {
+              productDispatch({ type: "BY_STOCK" });
+            }}
+            checked={productState.byStock}
+          />
+          <label htmlFor="stock">Exclude Out of Stock Item</label>
         </div>
         <div>
           <h3>Rating</h3>
-          <div>
-            <input type="checkbox" name="rating" id="rating1" />
-            <label htmlFor="rating1">4 Stars and above</label>
-          </div>
-          <div>
-            <input type="checkbox" name="rating" id="rating2" />
-            <label htmlFor="rating2">3 Stars and above</label>
-          </div>
-          <div>
-            <input type="checkbox" name="rating" id="rating3" />
-            <label htmlFor="rating3">2 Stars and above</label>
-          </div>
-          <div>
-            <input type="checkbox" name="rating" id="rating4" />
-            <label htmlFor="rating4">1 Star and above</label>
-          </div>
+          {Rating}
         </div>
         <SortBy />
       </div>
+      <button
+        onClick={() => productDispatch({ type: "REMOVE_FILTER" })}
+        className="clear-filter-btn"
+      >
+        {" "}
+        Clear Filters
+      </button>
     </div>
   );
 };

@@ -8,6 +8,11 @@ nav{
     margin-bottom: 10px;
 }
 
+nav h1 {
+    font-size: 20px;
+    color: white;
+}
+
 .search-bar {
     display: flex;
     justify-content: center;
@@ -42,15 +47,4 @@ nav{
 
 .search-bar button:hover {
     text-decoration: underline;
-}
-
-.shopping-cart{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #28f025;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 10px;
-    width: 50px;
 }

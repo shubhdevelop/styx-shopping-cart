@@ -2,6 +2,7 @@ import { Trash2 } from "lucide-react";
 import "./cartBadge.css";
 import { CartState } from "../../../context/Context";
 import { IndividualProduct } from "../../../types/Cart.types";
+import { formatPrice } from "../../../utils";
 
 type Props = {
   id: number;
@@ -26,10 +27,10 @@ const CartItem = ({ id, title, images, price, discount }: Props) => {
       <div className="cart-item-details">
         <h4 className="cart-item-title">{title}</h4>
         <span className="oneliner">
-          <h4 className="cart-item-price">${(price * quantity).toFixed()}</h4>
-          <h5 className="price-discount">{discount.toFixed()}% off</h5>
+          <h4 className="cart-item-price">{formatPrice(price * quantity)}</h4>
+          <h5 className="price-discount">{discount}% off</h5>
           <h5 className="actual-price">
-            {((1 + discount / 100) * price * quantity).toFixed()}
+            {formatPrice((1 + discount / 100) * price * quantity)}
           </h5>
         </span>
 

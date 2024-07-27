@@ -2,7 +2,7 @@ import { ShoppingCart } from "lucide-react";
 import { CartState } from "../../../context/Context";
 import { IndividualProduct } from "../../../types/Cart.types";
 import "./cartBadge.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 

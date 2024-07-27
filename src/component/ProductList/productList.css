@@ -9,6 +9,10 @@
     height: 100%;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
 @media (max-width: 768px) {
     .product-list {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

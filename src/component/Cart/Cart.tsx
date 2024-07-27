@@ -4,6 +4,7 @@ import "./cart.css"; // Import the CSS file for styling
 import { IndividualProduct } from "../../types/Cart.types";
 import { Link } from "react-router-dom";
 import { ArrowBigLeft, StepBack } from "lucide-react";
+import { formatPrice } from "../../utils";
 
 const Cart = () => {
   const {
@@ -58,7 +59,7 @@ const Cart = () => {
                 Checkout
               </button>
             </Link>
-            <div className="cart-total">Total: ${totalPrice.toFixed()}</div>
+            <div className="cart-total">Total:{formatPrice(totalPrice)}</div>
           </>
         )}
       </div>
@@ -70,7 +71,7 @@ const Cart = () => {
         </div>
         <div className="list-item">
           <h5>Price</h5>
-          <p>${totalPrice.toFixed()}</p>
+          <p>{formatPrice(totalPrice)}</p>
         </div>
         <div className="list-item">
           <h5>Delivery Charges</h5>
@@ -79,7 +80,7 @@ const Cart = () => {
 
         <div className="list-item">
           <h3>Total Amount</h3>
-          <h3>${totalPrice.toFixed()}</h3>
+          <h3>{formatPrice(totalPrice)}</h3>
         </div>
       </div>
     </div>

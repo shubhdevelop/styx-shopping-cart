@@ -2,6 +2,7 @@ import { StarIcon } from "lucide-react";
 import { CartState } from "../../context/Context";
 import { CartItem } from "../../types/Cart.types";
 import "./product.css";
+import { formatPrice } from "../../utils";
 
 type Props = {
   title: string;
@@ -43,10 +44,10 @@ function Product({
       <div className="product-info">
         <h2 className="product-name">{title}</h2>
         <p className="price-info product-price">
-          <span>&#8377;</span> {price.toFixed()}
-          <span className="price-discount">{discount.toFixed()}% off</span>
+          {formatPrice(price)}
+          <span className="price-discount">{discount}% off</span>
           <span className="actual-price">
-            {((1 + discount / 100) * price).toFixed()}
+            {formatPrice((1 + discount / 100) * price)}
           </span>
         </p>
         <p className="product-description">{description}</p>

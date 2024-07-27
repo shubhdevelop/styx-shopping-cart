@@ -63,7 +63,7 @@
 }
 
 .price-discount {
-    font-size: 16px;
+    font-size: 13px;
     margin: 0;
     color: #84eb95;
     margin-right: 3px;
@@ -107,6 +107,3 @@
     color: #a3a1a1;
     cursor: not-allowed;
 }
-/* .product-button:hover {
-    background-color: #0056b3;
-} */

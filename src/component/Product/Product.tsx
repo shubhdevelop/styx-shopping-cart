@@ -34,7 +34,7 @@ function Product({
       Rating.push(<StarIcon key={i} size={10} fill="#0051ff" stroke="none" />);
     } else {
       Rating.push(
-        <StarIcon key={i} size={10} stroke="#0051ff" strokeWidth={1} />
+        <StarIcon key={i} size={10} stroke="#0051ff" strokeWidth={1} />,
       );
     }
   }
@@ -72,6 +72,7 @@ function Product({
                 images: [src],
                 description,
                 rating,
+                stock,
               },
             });
           }}

@@ -18,7 +18,7 @@ const Favorites = () => {
       <Product
         rating={product.rating}
         title={product.title}
-        price={product.price * 100}
+        price={product.price}
         description={product.description.split(/\s+/).slice(0, 6).join(" ")}
         src={product.images[0]}
         key={product.id}

@@ -15,36 +15,36 @@ Thought of doing this assignment in Next.js, then Adhered to the Assignment Guid
 [Vecel](https://styx-shopping-cart.vercel.app/)
 
 
-## Feature Implemented
+## Features Implemented
 - [x]  Product Listing Page
 - [x]  Each Product Page
 - [x]  Mobile Responsive
 - [x]  Separate Cart Page
-**Filterisation** 
-- [x] Ordering Based on Price 
-- [x] Ordering Based on Rating  
+##### **Filterisation**
+- [x] Ordering Based on Price
+- [x] Ordering Based on Rating
 - [x] Filtering Based on Rating
 - [x] Filtering Based on Availability
-**Sorting**
+##### **Sorting**
 - [x]  Low to High
 - [x]  High to Low
-**Searching**
+##### **Searching**
 - [x]  Implemented Debouncing for enchance searching
-**Fully Functional Cart**
+##### **Fully Functional Cart**
 - [x]  Add To Cart
 - [x]  Remove Item
 - [x]  Clear Cart
 - [x]  Change Quantity
-**Fully Function Favorites**
+##### **Fully Function Favorites**
 - [x]  Add To Favorites
 - [x]  Remove From Favorites
 - [x]  Clear Favorites
-**Performance**
+##### **Performance**
 - [x]  Debouncing
-**UX**
+##### **UX**
 - [x] Proper Navigation
 - [x] Error Hangling, with routes
-- [x] Eye Catching Visuals
+- [x] Well Designed Components
 
 
 ## Performance
@@ -63,11 +63,10 @@ By implementing debouncing, I successfully optimized the searching feature by **
 
 ## Type Safety
 
-To ensure type safety and enhance the development experience, I utilized **TypeScript** in my Styx Shopping Cart project. 
+To ensure type safety and enhance the development experience, I utilized **TypeScript** in my Styx Shopping Cart project.
 
 By using TypeScript, I was able to define explicit types for variables, function parameters, and return values. This helped me catch potential type errors during development, as TypeScript performs static type checking and provides compile-time feedback on type mismatches.
 
 In addition, TypeScript's type system enabled me to leverage features such as union types, intersection types, and generics. These advanced type features allowed me to write more expressive and reusable code, leading to better maintainability and extensibility of the project.
 
 Overall, by incorporating TypeScript into my Styx Shopping Cart project, I ensured type safety, caught potential errors early in the development process, and enjoyed a more robust and efficient development experience.
-

@@ -51,14 +51,7 @@ const Cart = () => {
             >
               Clear Cart
             </button>
-            <Link to="/checkout">
-              <button
-                onClick={() => dispatch({ type: "CLEAR_CART" })}
-                className="checkout-btn"
-              >
-                Checkout
-              </button>
-            </Link>
+
             <div className="cart-total">Total:{formatPrice(totalPrice)}</div>
           </>
         )}
@@ -82,6 +75,14 @@ const Cart = () => {
           <h3>Total Amount</h3>
           <h3>{formatPrice(totalPrice)}</h3>
         </div>
+        <Link to="/checkout">
+          <button
+            onClick={() => dispatch({ type: "CLEAR_CART" })}
+            className="checkout-btn"
+          >
+            Checkout
+          </button>
+        </Link>
       </div>
     </div>
   );

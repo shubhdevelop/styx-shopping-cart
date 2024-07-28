@@ -9,7 +9,7 @@ Thought of doing this assignment in Next.js, then Adhered to the Assignment Guid
 - React, Typescript, React Router
 
 
-### Design File
+### Design File : Wireframe
 [Figma](https://www.figma.com/design/p5PLinvCe82ZudXuhYcp3u/styx-shopping-cart?node-id=0-1&t=qvl1bfBF4lwUXSfc-1)
 ### Deployment Link
 [Vecel](https://styx-shopping-cart.vercel.app/)

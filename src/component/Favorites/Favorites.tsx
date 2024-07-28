@@ -22,9 +22,9 @@ const Favorites = () => {
         description={product.description.split(/\s+/).slice(0, 6).join(" ")}
         src={product.images[0]}
         key={product.id}
-        discount={product.discountPercentage}
+        discount={product.discount || 0}
         id={product.id}
-        stock={product.stock}
+        stock={product.stock || 0}
       ></Product>
     );
   });

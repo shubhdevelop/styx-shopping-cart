@@ -69,7 +69,7 @@ function CartBadge() {
   );
 
   return (
-    <div>
+    <div title="Cart">
       <div className="shopping-cart" onClick={toggleDropdown}>
         <ShoppingCart />
         <span>{state.cart.length}</span>

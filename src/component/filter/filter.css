@@ -41,19 +41,6 @@
 
 }
 
-select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #0051ff;
-    margin-bottom: 10px;
-}
-
-select option{
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #0051ff;
-    margin-bottom: 10px;
-}
 
 .filter-section label {
     display: inline-block;

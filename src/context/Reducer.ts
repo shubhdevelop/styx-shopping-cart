@@ -9,6 +9,18 @@ export const cartReducer = (state: any, action: any) => {
         ...state,
         cart: state.cart.filter((c: CartItem) => c.id !== action.payload.id),
       };
+    case "ADD_TO_FAVORITE":
+      return {
+        ...state,
+        favorites: [...state.favorites, { ...action.payload, qty: 1 }],
+      };
+    case "REMOVE_FROM_FAVORITE":
+      return {
+        ...state,
+        favorites: state.favorites.filter(
+          (c: CartItem) => c.id !== action.payload.id
+        ),
+      };
     case "ADD_QTY":
       return {
         ...state,

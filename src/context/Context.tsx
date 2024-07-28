@@ -13,6 +13,7 @@ const Context = ({ children }: Props) => {
   const [state, dispatch] = useReducer(cartReducer, {
     products: data.products,
     cart: [],
+    favorites: [],
   });
 
   type FilterType = {

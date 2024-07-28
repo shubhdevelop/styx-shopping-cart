@@ -1,4 +1,4 @@
-import { StarIcon } from "lucide-react";
+import { Heart, StarIcon } from "lucide-react";
 import { CartState } from "../../context/Context";
 import { CartItem } from "../../types/Cart.types";
 import "./product.css";
@@ -27,6 +27,7 @@ function Product({
   const { state, dispatch } = CartState();
 
   const isInCart = state.cart.some((c: CartItem) => c.id === id);
+  const isInFavorite = state.favorites.some((c: CartItem) => c.id === id);
   const Rating: React.ReactNode[] = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
@@ -38,6 +39,42 @@ function Product({
 
   return (
     <div className="product">
+      {isInFavorite ? (
+        <Heart
+          className="favorite"
+          size={20}
+          fill={"rgb(249, 0, 104)"}
+          stroke="none"
+          onClick={() => {
+            dispatch({
+              type: "REMOVE_FROM_FAVORITE",
+              payload: {
+                id,
+              },
+            });
+          }}
+        />
+      ) : (
+        <Heart
+          className="favorite"
+          size={20}
+          onClick={() => {
+            dispatch({
+              type: "ADD_TO_FAVORITE",
+              payload: {
+                id,
+                title,
+                price,
+                discount,
+                qty: 1,
+                images: [src],
+                description,
+                rating,
+              },
+            });
+          }}
+        />
+      )}
       <div className="image-container">
         <img className="product-image" src={src} alt={title} />
       </div>
@@ -61,7 +98,15 @@ function Product({
           onClick={() => {
             dispatch({
               type: "ADD_TO_CART",
-              payload: { id, title, price, discount, qty: 1, images: [src] },
+              payload: {
+                id,
+                title,
+                price,
+                discount,
+                qty: 1,
+                description,
+                images: [src],
+              },
             });
           }}
           className="product-button"

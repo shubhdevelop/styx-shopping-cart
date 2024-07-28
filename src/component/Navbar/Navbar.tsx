@@ -3,6 +3,8 @@ import CartBadge from "../Cart/CartBadge/CartBadge";
 import { Link } from "react-router-dom";
 import { CartState } from "../../context/Context";
 import { useEffect, useState } from "react";
+import { Heart } from "lucide-react";
+import { createEnumDeclaration } from "typescript";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -21,7 +23,7 @@ const Navbar = () => {
 
   const debouncedSearch = debounce(
     () => productDispatch({ type: "FILTER_BY_SEARCH", payload: search }),
-    500,
+    500
   );
 
   useEffect(() => {
@@ -44,7 +46,32 @@ const Navbar = () => {
           }}
         />
       </div>
-      <CartBadge />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 10,
+        }}
+      >
+        <Link
+          to="/favorites"
+          style={{
+            width: 50,
+            // height: 50,
+            backgroundColor: "rgb(249, 0, 104)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: 5,
+            borderRadius: 5,
+          }}
+          title="Favorites"
+        >
+          <Heart size={30} stroke="white" />
+        </Link>
+        <CartBadge />
+      </div>
     </nav>
   );
 };

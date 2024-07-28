@@ -18,14 +18,13 @@ Thought of doing this assignment in Next.js, then Adhered to the Assignment Guid
 ## Feature Implemented
 - [x]  Product Listing Page
 - [x]  Each Product Page
-- [ ]  Responsive (sort of)
+- [x]  Mobile Responsive
 - [x]  Separate Cart Page
 **Filterisation** 
 - [x] Ordering Based on Price 
 - [x] Ordering Based on Rating  
 - [x] Filtering Based on Rating
 - [x] Filtering Based on Availability
-  
 **Sorting**
 - [x]  Low to High
 - [x]  High to Low
@@ -34,9 +33,18 @@ Thought of doing this assignment in Next.js, then Adhered to the Assignment Guid
 **Fully Functional Cart**
 - [x]  Add To Cart
 - [x]  Remove Item
+- [x]  Clear Cart
 - [x]  Change Quantity
+**Fully Function Favorites**
+- [x]  Add To Favorites
+- [x]  Remove From Favorites
+- [x]  Clear Favorites
 **Performance**
 - [x]  Debouncing
+**UX**
+- [x] Proper Navigation
+- [x] Error Hangling, with routes
+- [x] Eye Catching Visuals
 
 
 ## Performance
@@ -62,3 +70,4 @@ By using TypeScript, I was able to define explicit types for variables, function
 In addition, TypeScript's type system enabled me to leverage features such as union types, intersection types, and generics. These advanced type features allowed me to write more expressive and reusable code, leading to better maintainability and extensibility of the project.
 
 Overall, by incorporating TypeScript into my Styx Shopping Cart project, I ensured type safety, caught potential errors early in the development process, and enjoyed a more robust and efficient development experience.
+

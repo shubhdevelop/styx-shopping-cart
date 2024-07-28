@@ -72,7 +72,7 @@ function ProductList() {
       ></Product>
     );
   });
-  return <div className="product-list .hide-scroll">{AllProducts}</div>;
+  return <div className="product-list">{AllProducts}</div>;
 }
 
 export default ProductList;

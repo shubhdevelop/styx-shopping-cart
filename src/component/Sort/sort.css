@@ -10,11 +10,15 @@
 
 .sort-label {
     margin-right: 0.5rem;
+    color: white;
+    font-size: 1rem;
 }
 
 .sort-select {
-    padding: 0.3rem 0.5rem;
-    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    border: .1px solid blu #0051ff;
+    background-color: white;
     border-radius: 4px;
     font-size: 1rem;
     outline: none;

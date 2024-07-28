@@ -1,11 +1,15 @@
 nav{
-    background-color: #333;
+    background-color: #0051ff;  
     color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999999;
 }
 
 nav h1 {
@@ -13,7 +17,7 @@ nav h1 {
     color: white;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     nav h1 {
         display: none;
     }
@@ -38,7 +42,7 @@ nav h1 {
     width: 400px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     .search-bar input {
         width: 200px;
     }
@@ -51,7 +55,7 @@ nav h1 {
 .search-bar button {
     border: none;
     background-color: transparent;
-    color: #333;
+    color: #000000;
     font-size: 14px;
     padding: 5px;
     cursor: pointer;

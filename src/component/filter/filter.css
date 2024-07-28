@@ -1,18 +1,34 @@
 .filter-section {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     justify-content: start;
     justify-self: self-start;
     margin-bottom: 20px;
     width: 300px;
     max-width: 500px;
     min-width: fit-content;
-    max-height: 385px;
+    max-height: 400px;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 0px solid  #0051ff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 110px;
+    z-index: 9999;
+    background-color: white;
+}
+
+@media (max-width: 550px) {
+    .filter-section{
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+}
+
+
+.clear-filter h2{
+    margin-bottom: 0px;
 }
 
 .filter-section h3 {
@@ -21,6 +37,22 @@
 
 .filter-section input[type="checkbox"] {
     margin-right: 5px;
+    background-color: aliceblue;
+
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0051ff;
+    margin-bottom: 10px;
+}
+
+select option{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #0051ff;
+    margin-bottom: 10px;
 }
 
 .filter-section label {
@@ -30,10 +62,10 @@
 .clear-filter-btn {
     margin-top: 10px;
     font-size: large;
-    color: whitesmoke;
     padding: 10px 10px;
-    border: 1px solid #ccc;
+    border: 0px solid #000;
+    color: white;
     border-radius: 5px;
-    background-color: #ffa125;
+    background-color: #ff4225;
     cursor: pointer;
 }

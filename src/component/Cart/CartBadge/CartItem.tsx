@@ -66,8 +66,8 @@ const CartItem = ({ id, title, images, price, discount }: Props) => {
       </div>
       <Trash2
         cursor={"pointer"}
-        stroke="black"
-        strokeWidth={0.5}
+        stroke={"red"}
+        strokeWidth={1}
         onClick={() => {
           dispatch({
             type: "REMOVE_FROM_CART",

@@ -31,9 +31,11 @@ function Product({
   const Rating: React.ReactNode[] = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
-      Rating.push(<StarIcon key={i} size={10} fill="black" />);
+      Rating.push(<StarIcon key={i} size={10} fill="#0051ff" stroke="none" />);
     } else {
-      Rating.push(<StarIcon key={i} size={10} />);
+      Rating.push(
+        <StarIcon key={i} size={10} stroke="#0051ff" strokeWidth={1} />
+      );
     }
   }
 

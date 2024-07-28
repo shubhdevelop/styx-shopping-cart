@@ -11,9 +11,11 @@ const FilterSection = () => {
     if (i <= productState.rating) {
       Rating.push(
         <StarIcon
+          cursor={"pointer"}
           key={i}
           size={24}
-          fill="black"
+          fill="#0051ff"
+          stroke="none"
           onClick={() =>
             productDispatch({
               type: "FILTER_BY_RATING",
@@ -26,7 +28,10 @@ const FilterSection = () => {
       Rating.push(
         <StarIcon
           key={i}
+          cursor={"pointer"}
           size={24}
+          stroke="#0051ff"
+          strokeWidth={1}
           onClick={() =>
             productDispatch({
               type: "FILTER_BY_RATING",

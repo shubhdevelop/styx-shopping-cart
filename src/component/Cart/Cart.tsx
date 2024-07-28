@@ -3,7 +3,7 @@ import CartItem from "./CartBadge/CartItem";
 import "./cart.css"; // Import the CSS file for styling
 import { IndividualProduct } from "../../types/Cart.types";
 import { Link } from "react-router-dom";
-import { ArrowBigLeft, StepBack } from "lucide-react";
+import { ArrowBigLeft } from "lucide-react";
 import { formatPrice } from "../../utils";
 
 const Cart = () => {

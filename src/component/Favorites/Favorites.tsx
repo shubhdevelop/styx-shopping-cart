@@ -37,7 +37,25 @@ const Favorites = () => {
             <ArrowBigLeft /> <p>Continue Shopping</p>
           </div>
         </Link>
+
         <div className="product-list">{AllFavoriteProducts}</div>
+        {favorites.length === 0 ? (
+          <div style={{ textAlign: "center", marginTop: "50px" }}>
+            <h2 style={{ color: "#0051ff" }}>No Favorites added yet!</h2>
+          </div>
+        ) : (
+          <button
+            style={{
+              marginTop: "50px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+            onClick={() => dispatch({ type: "CLEAR_FAVORITES" })}
+            className="clear-filter-btn"
+          >
+            Clear Favorites
+          </button>
+        )}
       </div>
     </div>
   );

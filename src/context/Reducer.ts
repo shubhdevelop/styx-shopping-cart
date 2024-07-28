@@ -1,3 +1,4 @@
+import Favorites from "../component/Favorites/Favorites";
 import { CartItem } from "../types/Cart.types";
 
 export const cartReducer = (state: any, action: any) => {
@@ -21,6 +22,8 @@ export const cartReducer = (state: any, action: any) => {
           (c: CartItem) => c.id !== action.payload.id
         ),
       };
+    case "CLEAR_FAVORITES":
+      return { ...state, favorites: [] };
     case "ADD_QTY":
       return {
         ...state,

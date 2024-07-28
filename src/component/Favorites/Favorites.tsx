@@ -13,7 +13,6 @@ const Favorites = () => {
   } = CartState();
 
   const AllFavoriteProducts = favorites.map((product: IndividualProduct) => {
-    console.log(product);
     return (
       <Product
         rating={product.rating}

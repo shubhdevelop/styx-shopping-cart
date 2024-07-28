@@ -2,7 +2,7 @@ import { ShoppingCart } from "lucide-react";
 import { CartState } from "../../../context/Context";
 import { IndividualProduct } from "../../../types/Cart.types";
 import "./cartBadge.css";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 
@@ -25,8 +25,23 @@ function CartBadge() {
     />
   ));
 
+  const dropDown = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropDown.current && !dropDown.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const dropdownContent = (
-    <div className="dropdown-content">
+    <div className="dropdown-content" ref={dropDown}>
       <div className="item-container hide-scrollbar">
         {cartItems ? [...cartItems] : <p>No item in Cart !</p>}
       </div>
